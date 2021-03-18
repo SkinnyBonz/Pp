@@ -1,0 +1,514 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local AutoKickButton = Instance.new("TextButton")
+local AntiAfkButton = Instance.new("TextButton")
+local ItemEspButton = Instance.new("TextButton")
+local PlayerEsp = Instance.new("TextButton")
+local AutoFramEsp = Instance.new("TextButton")
+local Close = Instance.new("TextButton")
+local Message = Instance.new("TextLabel")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local UICorner = Instance.new("UICorner")
+local LockFrame = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local TextLabel_3 = Instance.new("TextLabel")
+local User = Instance.new("TextBox")
+local Pass = Instance.new("TextBox")
+local Login = Instance.new("TextButton")
+local Close_2 = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ResetOnSpawn = false
+
+Main.Active = true
+LockFrame.Active = true
+
+Main.Name = "Main"
+Main.Parent = ScreenGui
+Main.BackgroundColor3 = Color3.fromRGB(66, 66, 66)
+Main.Position = UDim2.new(0.0143329659, 0, 0.559561074, 0)
+Main.Size = UDim2.new(0, 226, 0, 250)
+Main.Visible = false
+
+AutoKickButton.Name = "Auto-Kick-Button"
+AutoKickButton.Parent = Main
+AutoKickButton.BackgroundColor3 = Color3.fromRGB(46, 46, 46)
+AutoKickButton.BackgroundTransparency = 0.020
+AutoKickButton.BorderSizePixel = 0
+AutoKickButton.Position = UDim2.new(0.0575221255, 0, 0.299137563, 0)
+AutoKickButton.Size = UDim2.new(0, 93, 0, 40)
+AutoKickButton.Font = Enum.Font.SourceSans
+AutoKickButton.Text = "Auto-Kick"
+AutoKickButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+AutoKickButton.TextSize = 16.000
+
+AntiAfkButton.Name = "Anti-Afk-Button"
+AntiAfkButton.Parent = Main
+AntiAfkButton.BackgroundColor3 = Color3.fromRGB(46, 46, 46)
+AntiAfkButton.BackgroundTransparency = 0.020
+AntiAfkButton.BorderSizePixel = 0
+AntiAfkButton.Position = UDim2.new(0.535398245, 0, 0.299137563, 0)
+AntiAfkButton.Size = UDim2.new(0, 93, 0, 40)
+AntiAfkButton.Font = Enum.Font.SourceSans
+AntiAfkButton.Text = "Anti-Afk"
+AntiAfkButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+AntiAfkButton.TextSize = 16.000
+
+ItemEspButton.Name = "Item-Esp-Button"
+ItemEspButton.Parent = Main
+ItemEspButton.BackgroundColor3 = Color3.fromRGB(46, 46, 46)
+ItemEspButton.BackgroundTransparency = 0.020
+ItemEspButton.BorderSizePixel = 0
+ItemEspButton.Position = UDim2.new(0.0575221255, 0, 0.529956162, 0)
+ItemEspButton.Size = UDim2.new(0, 93, 0, 40)
+ItemEspButton.Font = Enum.Font.SourceSans
+ItemEspButton.Text = "Item-Esp"
+ItemEspButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ItemEspButton.TextSize = 16.000
+
+PlayerEsp.Name = "Player-Esp"
+PlayerEsp.Parent = Main
+PlayerEsp.BackgroundColor3 = Color3.fromRGB(46, 46, 46)
+PlayerEsp.BackgroundTransparency = 0.020
+PlayerEsp.BorderSizePixel = 0
+PlayerEsp.Position = UDim2.new(0.535398245, 0, 0.529956162, 0)
+PlayerEsp.Size = UDim2.new(0, 93, 0, 40)
+PlayerEsp.Font = Enum.Font.SourceSans
+PlayerEsp.Text = "Player-Esp"
+PlayerEsp.TextColor3 = Color3.fromRGB(255, 255, 255)
+PlayerEsp.TextSize = 16.000
+
+AutoFramEsp.Name = "Auto-Fram-Esp"
+AutoFramEsp.Parent = Main
+AutoFramEsp.BackgroundColor3 = Color3.fromRGB(46, 46, 46)
+AutoFramEsp.BackgroundTransparency = 0.020
+AutoFramEsp.BorderSizePixel = 0
+AutoFramEsp.Position = UDim2.new(0.0575221255, 0, 0.745189071, 0)
+AutoFramEsp.Size = UDim2.new(0, 93, 0, 40)
+AutoFramEsp.Font = Enum.Font.SourceSans
+AutoFramEsp.Text = "Auto-Farm"
+AutoFramEsp.TextColor3 = Color3.fromRGB(255, 255, 255)
+AutoFramEsp.TextSize = 16.000
+
+Close.Name = "Close"
+Close.Parent = Main
+Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Close.BackgroundTransparency = 1.000
+Close.Position = UDim2.new(0.734513283, 0, -0.000520445406, 0)
+Close.Size = UDim2.new(0, 60, 0, 42)
+Close.Font = Enum.Font.SourceSans
+Close.Text = "Evacuate "
+Close.TextColor3 = Color3.fromRGB(85, 0, 0)
+Close.TextSize = 17.000
+
+Message.Name = "Message"
+Message.Parent = Main
+Message.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Message.BackgroundTransparency = 1.000
+Message.Position = UDim2.new(0.0309734512, 0, 0.937189102, 0)
+Message.Size = UDim2.new(0, 219, 0, 15)
+Message.Font = Enum.Font.SourceSans
+Message.Text = "Yes"
+Message.TextColor3 = Color3.fromRGB(0, 0, 0)
+Message.TextSize = 14.000
+Message.TextXAlignment = Enum.TextXAlignment.Left
+
+TextLabel.Parent = Main
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.469026536, 0, 0.796000123, 0)
+TextLabel.Size = UDim2.new(0, 120, 0, 44)
+TextLabel.Font = Enum.Font.PermanentMarker
+TextLabel.Text = "Coom Gui"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 21.000
+
+TextLabel_2.Parent = Main
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0.0309734456, 0, 0.0280001163, 0)
+TextLabel_2.Size = UDim2.new(0, 120, 0, 44)
+TextLabel_2.Font = Enum.Font.PermanentMarker
+TextLabel_2.Text = "Coom Gui"
+TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.TextSize = 20.000
+
+UICorner.CornerRadius = UDim.new(0.0500000007, 0)
+UICorner.Parent = Main
+
+LockFrame.Name = "Lock-Frame"
+LockFrame.Parent = ScreenGui
+LockFrame.BackgroundColor3 = Color3.fromRGB(66, 66, 66)
+LockFrame.Position = UDim2.new(0.374862194, 0, 0.288401186, 0)
+LockFrame.Size = UDim2.new(0, 226, 0, 269)
+
+UICorner_2.CornerRadius = UDim.new(0, 5)
+UICorner_2.Parent = LockFrame
+
+TextLabel_3.Parent = LockFrame
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.Position = UDim2.new(0, 0, -0.00127867516, 0)
+TextLabel_3.Size = UDim2.new(0, 226, 0, 50)
+TextLabel_3.Font = Enum.Font.PermanentMarker
+TextLabel_3.Text = "Coom Gui"
+TextLabel_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.TextSize = 17.000
+
+User.Name = "User"
+User.Parent = LockFrame
+User.BackgroundColor3 = Color3.fromRGB(74, 74, 74)
+User.BorderColor3 = Color3.fromRGB(46, 46, 46)
+User.Position = UDim2.new(0.0309734512, 0, 0.230483249, 0)
+User.Size = UDim2.new(0, 213, 0, 50)
+User.Font = Enum.Font.SourceSans
+User.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+User.PlaceholderText = "Username"
+User.Text = ""
+User.TextColor3 = Color3.fromRGB(255, 255, 255)
+User.TextSize = 16.000
+User.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+
+Pass.Name = "Pass"
+Pass.Parent = LockFrame
+Pass.BackgroundColor3 = Color3.fromRGB(74, 74, 74)
+Pass.BorderColor3 = Color3.fromRGB(46, 46, 46)
+Pass.Position = UDim2.new(0.0265486725, 0, 0.486988872, 0)
+Pass.Size = UDim2.new(0, 213, 0, 50)
+Pass.Font = Enum.Font.SourceSans
+Pass.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+Pass.PlaceholderText = "Password"
+Pass.Text = ""
+Pass.TextColor3 = Color3.fromRGB(255, 255, 255)
+Pass.TextSize = 16.000
+Pass.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+
+Login.Name = "Login"
+Login.Parent = LockFrame
+Login.BackgroundColor3 = Color3.fromRGB(46, 46, 46)
+Login.BorderSizePixel = 0
+Login.Position = UDim2.new(0.0309734512, 0, 0.75836432, 0)
+Login.Size = UDim2.new(0, 213, 0, 52)
+Login.Font = Enum.Font.SourceSans
+Login.Text = "Coom In"
+Login.TextColor3 = Color3.fromRGB(255, 255, 255)
+Login.TextSize = 16.000
+
+Close_2.Name = "Close"
+Close_2.Parent = LockFrame
+Close_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Close_2.BackgroundTransparency = 1.000
+Close_2.Position = UDim2.new(0.734513283, 0, 0.0106319711, 0)
+Close_2.Size = UDim2.new(0, 60, 0, 42)
+Close_2.Font = Enum.Font.SourceSans
+Close_2.Text = "Evacuate "
+Close_2.TextColor3 = Color3.fromRGB(85, 0, 0)
+Close_2.TextSize = 17.000
+
+-- Scripts:
+
+local function RWMEUCX_fake_script() -- Main.Dragify 
+	local script = Instance.new('LocalScript', Main)
+
+	local UIS = game:GetService("UserInputService")
+	function dragify(Frame)
+	    dragToggle = nil
+	    local dragSpeed = 0.50
+	    dragInput = nil
+	    dragStart = nil
+	    local dragPos = nil
+	    function updateInput(input)
+	        local Delta = input.Position - dragStart
+	        local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+	        game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.30), {Position = Position}):Play()
+	    end
+	    Frame.InputBegan:Connect(function(input)
+	        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+	            dragToggle = true
+	            dragStart = input.Position
+	            startPos = Frame.Position
+	            input.Changed:Connect(function()
+	                if input.UserInputState == Enum.UserInputState.End then
+	                    dragToggle = false
+	                end
+	            end)
+	        end
+	    end)
+	    Frame.InputChanged:Connect(function(input)
+	        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	            dragInput = input
+	        end
+	    end)
+	    game:GetService("UserInputService").InputChanged:Connect(function(input)
+	        if input == dragInput and dragToggle then
+	            updateInput(input)
+	        end
+	    end)
+	end
+	
+	dragify(script.Parent)
+end
+coroutine.wrap(RWMEUCX_fake_script)()
+local function QYYMEN_fake_script() -- AutoKickButton.LocalScript 
+	local script = Instance.new('LocalScript', AutoKickButton)
+
+	script.Parent.MouseButton1Down:connect(function()
+		game:GetService'Players'.PlayerAdded:Connect(function()
+			game:GetService'Players'.LocalPlayer:Kick()
+		end)
+	end)
+end
+coroutine.wrap(QYYMEN_fake_script)()
+local function HTFZH_fake_script() -- AntiAfkButton.LocalScript 
+	local script = Instance.new('LocalScript', AntiAfkButton)
+
+	script.Parent.MouseButton1Down:connect(function()
+		local vu = game:GetService("VirtualUser")
+		game:GetService("Players").LocalPlayer.Idled:connect(function()
+			vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+			wait(1)
+			vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+		end)
+	end)
+end
+coroutine.wrap(HTFZH_fake_script)()
+local function PGSHS_fake_script() -- ItemEspButton.LocalScript 
+	local script = Instance.new('LocalScript', ItemEspButton)
+
+	script.Parent.MouseButton1Down:connect(function()
+		for i,v in pairs(game.Workspace:GetDescendants()) do
+			if v.ClassName == "Decal" and v.Parent.Name == "scroll" then
+				local BillboardGui = Instance.new("BillboardGui")
+				local TextLabel = Instance.new("TextLabel")
+	
+				BillboardGui.Parent = v.Parent
+				BillboardGui.AlwaysOnTop = true
+				BillboardGui.LightInfluence = 1
+				BillboardGui.Size = UDim2.new(0, 50, 0, 50)
+				BillboardGui.StudsOffset = Vector3.new(0, 2, 0)
+	
+				TextLabel.Parent = BillboardGui
+				TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+				TextLabel.BackgroundTransparency = 1
+				TextLabel.Size = UDim2.new(1, 0, 1, 0)
+				TextLabel.Text = v.Parent.Parent.Name
+				TextLabel.TextColor3 = Color3.new(1, 0, 0)
+				TextLabel.TextScaled = true
+			end
+		end
+	end)
+end
+coroutine.wrap(PGSHS_fake_script)()
+local function VFZSKC_fake_script() -- PlayerEsp.LocalScript 
+	local script = Instance.new('LocalScript', PlayerEsp)
+
+	script.Parent.MouseButton1Down:connect(function()
+		ALLYCOLOR = {0,255,255}
+		ENEMYCOLOR =  {255,0,0}
+		TRANSPARENCY = 0.5
+		HEALTHBAR_ACTIVATED = false
+		function createFlex()
+			--[VARIABLES] //Changing may result in Errors!
+			players = game:GetService("Players") --//Required for PF
+			faces = {"Front","Back","Bottom","Left","Right","Top"}
+			currentPlayer = nil --//Used for the Team-Check
+			lplayer = players.LocalPlayer --//The LocalPlayer
+			players.PlayerAdded:Connect(function(p)
+				currentPlayer = p
+				p.CharacterAdded:Connect(function(character) 
+					createESP(character)			
+				end)		
+			end)
+			function checkPart(obj)  if (obj:IsA("Part") or obj:IsA("MeshPart")) and obj.Name~="HumanoidRootPart" then return true end end
+			function actualESP(obj) 
+	
+				for i=0,5 do
+					surface = Instance.new("SurfaceGui",obj)
+					surface.Face = Enum.NormalId[faces[i+1]]
+					surface.AlwaysOnTop = true
+	
+					frame = Instance.new("Frame",surface)
+					frame.Size = UDim2.new(1,0,1,0)
+					frame.BorderSizePixel = 0												
+					frame.BackgroundTransparency = TRANSPARENCY
+					if currentPlayer.Team == players.LocalPlayer.Team then --//Checks the Players Team
+						frame.BackgroundColor3 = Color3.new(ALLYCOLOR[1],ALLYCOLOR[2],ALLYCOLOR[3])										
+					else
+						frame.BackgroundColor3 = Color3.new(ENEMYCOLOR[1],ENEMYCOLOR[2],ENEMYCOLOR[3])
+					end
+	
+				end
+			end
+			function createESP(c) --//Checks and calls the proper function
+				bugfix = c:WaitForChild("Head")
+				for i,v in pairs(c:GetChildren()) do
+					if checkPart(v) then
+						actualESP(v)
+					end
+				end
+				if HEALTHBAR_ACTIVATED then --//If the user decided to
+					createHealthbar(c:WaitForChild("HumanoidRootPart"))
+				end
+			end
+			for i,people in pairs(players:GetChildren())do
+				if people ~= players.LocalPlayer then
+					currentPlayer = people
+					createESP(people.Character)
+					people.CharacterAdded:Connect(function(character)
+						createESP(character)			
+					end)
+				end
+			end
+		end
+	
+		createFlex()
+	end)
+end
+coroutine.wrap(VFZSKC_fake_script)()
+local function TYPRR_fake_script() -- AutoFramEsp.LocalScript 
+	local script = Instance.new('LocalScript', AutoFramEsp)
+
+	script.Parent.MouseButton1Down:connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/reavscripts/sl2_autofarm/main/main.lua", true))()
+	end)
+end
+coroutine.wrap(TYPRR_fake_script)()
+local function ZOSUE_fake_script() -- Close.LocalScript 
+	local script = Instance.new('LocalScript', Close)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		script.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(ZOSUE_fake_script)()
+local function INKZQ_fake_script() -- Message.LocalScript 
+	local script = Instance.new('LocalScript', Message)
+
+	script.Parent.Text = "You should send me Nudes"
+end
+coroutine.wrap(INKZQ_fake_script)()
+local function URYDMI_fake_script() -- TextLabel_2.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_2)
+
+	script.Parent.Text = "Love Me Blue!"
+	while true do
+		wait(.1)
+		script.Parent.TextTransparency = 1
+		wait(.1)
+		script.Parent.TextTransparency = 0.9
+		wait(.1)
+		script.Parent.TextTransparency = 0.8
+		wait(.1)
+		script.Parent.TextTransparency = 0.7
+		wait(.1)
+		script.Parent.TextTransparency = 0.6
+		wait(.1)
+		script.Parent.TextTransparency = 0.5
+		wait(.1)
+		script.Parent.TextTransparency = 0.4
+		wait(.1)
+		script.Parent.TextTransparency = 0.3
+		wait(.1)
+		script.Parent.TextTransparency = 0.2
+		wait(.1)
+		script.Parent.TextTransparency = 0.1
+		wait(.1)
+		script.Parent.TextTransparency = 0
+		wait(.1)
+		script.Parent.TextTransparency = 0.1
+		wait(.1)
+		script.Parent.TextTransparency = 0.2
+		wait(.1)
+		script.Parent.TextTransparency = 0.3
+		wait(.1)
+		script.Parent.TextTransparency = 0.4
+		wait(.1)
+		script.Parent.TextTransparency = 0.5
+		wait(.1)
+		script.Parent.TextTransparency = 0.6
+		wait(.1)
+		script.Parent.TextTransparency = 0.7
+		wait(.1)
+		script.Parent.TextTransparency = 0.8
+		wait(.1)
+		script.Parent.TextTransparency = 0.9
+	end
+end
+coroutine.wrap(URYDMI_fake_script)()
+local function LLWKP_fake_script() -- Login.LocalScript 
+	local script = Instance.new('LocalScript', Login)
+
+	local UserData = script.Parent.Parent.User -- this is the variable for the 'username' textbox. 
+	local button = script.Parent -- this is a variable for the Button.
+	local UserPass = script.Parent.Parent.Pass -- this is a variable for the 'Password' textbox
+	local End = script.Parent.Parent.Parent.Main -- rename Hackz to ur frame u want to open after logging in.
+	button.MouseButton1Click:Connect(function() -- will run the script down below after clicking the button
+		if UserData.Text == "Blue" and UserPass.Text == "bb" then -- change noob and 111 to a username and password u want
+			End.Visible = true  -- makes the hack frame visible after logging in.
+			script.Parent.Parent.Visible = false -- makes the login frame invisible after logging in.
+		else -- if the pass or username is wrong it will run the script down below
+			button.Text = "Try again" -- changes the text to try again
+			wait(0.5) -- waits another 0,5 secs
+			button.Text = "Coom In" -- changes the text back to login
+		end -- ends the if statement
+	end) -- ends the button function
+end
+coroutine.wrap(LLWKP_fake_script)()
+local function OFDA_fake_script() -- Close_2.LocalScript 
+	local script = Instance.new('LocalScript', Close_2)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		script.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(OFDA_fake_script)()
+local function VIVJ_fake_script() -- LockFrame.Dragify 
+	local script = Instance.new('LocalScript', LockFrame)
+
+	local UIS = game:GetService("UserInputService")
+	function dragify(Frame)
+	    dragToggle = nil
+	    local dragSpeed = 0.50
+	    dragInput = nil
+	    dragStart = nil
+	    local dragPos = nil
+	    function updateInput(input)
+	        local Delta = input.Position - dragStart
+	        local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+	        game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.30), {Position = Position}):Play()
+	    end
+	    Frame.InputBegan:Connect(function(input)
+	        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+	            dragToggle = true
+	            dragStart = input.Position
+	            startPos = Frame.Position
+	            input.Changed:Connect(function()
+	                if input.UserInputState == Enum.UserInputState.End then
+	                    dragToggle = false
+	                end
+	            end)
+	        end
+	    end)
+	    Frame.InputChanged:Connect(function(input)
+	        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	            dragInput = input
+	        end
+	    end)
+	    game:GetService("UserInputService").InputChanged:Connect(function(input)
+	        if input == dragInput and dragToggle then
+	            updateInput(input)
+	        end
+	    end)
+	end
+	
+	dragify(script.Parent)
+end
+coroutine.wrap(VIVJ_fake_script)()
